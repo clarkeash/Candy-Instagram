@@ -57,12 +57,7 @@ class Instagram {
 		$count = $sth->fetchColumn();
 
 		$result = self::fetchData("https://api.instagram.com/v1/users/".$user."/media/recent/?access_token=".$token."&count=".$count);
-		//$result = json_decode($result);
 		return $result;
-
-    	//   	foreach ($result->data as $post) {
-	   	//  		echo '<img src="'. $post->images->thumbnail->url .'">';
-	  	// 		}
 	}
 
 	private static function parseImages(){
@@ -76,7 +71,6 @@ class Instagram {
 			$html .= '<li>';
 			$html .= '<a href="'.$pic->link.'" title="View on Instagram">';
 			$html .= '<img src="'.$pic->images->thumbnail->url.'" alt="'.$pic->caption->text.'" />'; 
-			//$html .= '<span class="likes"><span>&hearts;</span> '.$shot->likes_count.'</span>';
 			$html .= '</a>';
 			$html .= '</li>';
 		}
@@ -106,7 +100,7 @@ class Instagram {
 		$sth = $dbh->prepare("SELECT option_value FROM ".DB_PREFIX."options WHERE `option_key`=?");
 		$sth->execute(array('instagram_count'));
 		$count = $sth->fetchColumn();
-		$instagram_url = "https://api.instagram.com/oauth/authorize/?client_id=d9cdf4edb31a4d03aba9828ce3716bae&redirect_uri=http://ashleyclarke.me/test/index.php&response_type=code";
+		$instagram_url = "https://api.instagram.com/oauth/authorize/?client_id=d9cdf4edb31a4d03aba9828ce3716bae&redirect_uri=http://ashleyclarke.me/instagram/index.php&response_type=code";
 
 		$html = "<h3>Instagram Settings</h3>";
 
