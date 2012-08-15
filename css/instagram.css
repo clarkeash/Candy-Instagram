@@ -1,0 +1,28 @@
+.instagram{
+	margin: 15px 0 0;
+}
+
+.instagram li{
+	display: inline;
+	position: relative;
+	margin: 0 4px;
+}
+
+
+
+/*
+.instagram li .likes{
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+	padding: 3px;
+	position: absolute;
+	right: 5px;
+	bottom: 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.instagram .likes span{
+	font-size: 0.7em;
+}*/
