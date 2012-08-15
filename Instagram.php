@@ -124,7 +124,6 @@ class Instagram {
  		$html .= "</ul>";
  		$html .= "<br><a href='".$instagram_url."' class='button' target='_blank'>Get Instagram Details</a>";
 
-
  		return $html;
  	}
  	
@@ -141,7 +140,3 @@ class Instagram {
  	}
 
 }
-
-
-
-
